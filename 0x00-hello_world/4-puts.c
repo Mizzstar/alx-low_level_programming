@@ -1,12 +1,12 @@
 #include <stdio.h>
 
 /**
- * main - entry point for the program
- *
- * Return: Displays a message to the terminal.
+ * main - Short description, single line
+ * Description: Longer description of the function)?
+ * Return: Description of the returned value
  */
 int main(void)
-{
-	printf("\"programming is like building a multilingual puzzle");
+{ 
+	puts("\"Programming is like building a multilingual puzzle");
 	return (0);
 }

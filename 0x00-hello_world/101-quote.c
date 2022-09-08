@@ -1,12 +1,12 @@
 #include <stdio.h>
 
 /**
- * main - entry ppoint for the program
- *
- * Return: Displays a message to the terminal.
+ * main - Short description, single line
+ * Description: Longer description of the function)?
+ * Return: Description of the returned valve
  */
 int main(void)
 {
-	printf("\"and that piece of art is useful" -Dora Korpar, 2015-10-19");
+	puts("and that piece of art is useful" - Dora Korpar, 2015-10-19");
 	reture (0);
 }
