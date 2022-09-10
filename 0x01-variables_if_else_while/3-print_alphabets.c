@@ -1,31 +1,30 @@
 #include <stdio.h>
-#include <stdlib.h>
 #include <time.h>
+#include <stdlib.h>
 
 /**
  * main - Entry point
- *Description: prints alphabet in lowercase then uppercase
- * Return: Always 0 (success)
+ *
+ * Return: 0 (Successful)
  */
 int main(void)
 {
 	char letter;
 
-	letter = 'a';
+	letter ='a';
 
-	while (letter <= 'z')
+	while (letter <='z')
 	{
 		putchar(letter);
 		letter++;
 	}
-	letter = 'A';
+	letter'A';
 
-	while (letter <= 'Z')
+	while (letter) <='Z'
 	{
 		putchar(letter);
 		letter++;
 	}
-	
 	putchar('\n');
 
 	return (0);
