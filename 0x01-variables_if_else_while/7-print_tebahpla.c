@@ -1,5 +1,6 @@
 #include <stdio.h>
-
+#include <stdlib.h>
+#include <time.h>
 /**
  * main - Entry point
  *
@@ -9,19 +10,12 @@ int main(void)
 {
 	char letter;
 
-	letter = 'a';
+	letter = 'z';
 
-	while (letter <= 'z')
+	while (letter >= 'a')
 	{
 		putchar(letter);
-		letter++;
-	}
-	letter = 'A';
-
-	while (letter <= 'Z')
-	{
-		putchar(letter);
-		letter++;
+		letter--;
 	}
 	putchar('\n');
 	return (0);
