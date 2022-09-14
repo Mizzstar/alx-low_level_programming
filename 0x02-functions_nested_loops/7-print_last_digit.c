@@ -2,10 +2,10 @@
 #include "main.h"
 
 /**
- * print_last-digit - Prints the last digit of a number.
- * @n: The number in question.
- *
- * Return: Value of the last digit.
+ * main - prograam execution starts
+ * @c: character to be checked
+ * Description: this is the main function
+ * Return: an integer to signify success or failure
  */
 int print_last_digit(int n)
 {
