@@ -23,7 +23,7 @@ void re_string(char *s)
 
 		temp = s[i];
 		s[i] = s[j];
-		s[j] = tmp;
+		s[j] = temp;
 	}
 }
 
