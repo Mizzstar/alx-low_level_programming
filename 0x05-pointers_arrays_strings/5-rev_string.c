@@ -1,50 +1,22 @@
 #include <stdio.h>
 #include "main.h"
 
-int get_length(char *);
-
 /**
- * re_string - Reverses a string.
+ * rev_string - Reverses a string.
  * @s: The string to be reversed.
- *
- * Return: void
  */
-void re_string(char *s)
+void rev_string(char *s)
 {
-	int length;
-	int i;
-	int j;
+	int len = 0, index = 0;
+	char tmp;
 
-	length = get_length(s);
+	while (s[index++])
+		len++;
 
-	for (i = 0, j = length - 1; !(i >= j); i++, j--)
+	for (index = len - 1; index >= len / 2; index--)
 	{
-		char temp;
-
-		temp = s[i];
-		s[i] = s[j];
-		s[j] = temp;
+		tmp = s[index];
+		s[index] = s[len - index - 1];
+		s[len - index - 1] = tmp;
 	}
-}
-
-/**
- * get_length - returns length of String
- * @s: String whose length we wish t determine
- *
- * Return: Length of String
- */
-int get_length(char *s)
-{
-	int length;
-	int i;
-
-	length = 0;
-	i = 0;
-	while (s[i] != '\n')
-	{
-		++length;
-		i++;
-	}
-
-	return (length);
 }
