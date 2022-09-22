@@ -44,4 +44,3 @@ void print_number(int n)
 		_putchar('0' + a8);
 	_putchar('0' + a9);
 }
-
