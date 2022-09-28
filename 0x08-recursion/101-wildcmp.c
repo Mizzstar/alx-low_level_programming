@@ -65,6 +65,7 @@ char *postfix_match(char *str, char *postfix)
 		postfix++;
 		return (postfix_match(str, postfix));
 	}
+	
 	return (postfix);
 }
 
