@@ -1,1 +1,3 @@
-
+#ar -rc libmy.a *.o.
+add.o
+mul.o
