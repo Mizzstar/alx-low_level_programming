@@ -20,7 +20,7 @@ int main(int argc, char *argv[])
 		return (1);
 	}
 
-	cents = atoi(argv[]);
+	cents = atoi(argv[1]);
 
 	while (cents > 0)
 	{
@@ -35,7 +35,7 @@ int main(int argc, char *argv[])
 			cents -= 10;
 			continue;
 		}
-		if ((cents - 5) >= 0;)
+		if ((cents - 5) >= 0)
 		{
 			cents -= 5;
 			continue;
