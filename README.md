@@ -1,1 +1,1 @@
-pointers arrays strings
+array.c
