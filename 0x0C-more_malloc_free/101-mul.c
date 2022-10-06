@@ -33,9 +33,9 @@ int find_lrn(char *str)
  * function exits with a statusof 98.
  * Return: a pointer to the array.
  */
-char *create_xarra(int size)
+char *create_xarray(int size)
 {
-	chsr *array;
+	char *array;
 	int index;
 
 	array = malloc(sizeof(char) * size);
@@ -43,7 +43,7 @@ char *create_xarra(int size)
 	if (array == NULL)
 		exit(98);
 
-	for (index = 0; index < (size -1); index++)
+	for (index = 0; index < (size - 1); index++)
 		array[index] = 'x';
 
 	array[index] = '\0';
