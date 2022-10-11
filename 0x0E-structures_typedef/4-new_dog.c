@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include <stdio.h>
 
-int_strlen(char *);
+int _strlen(char *);
 char *_strcopy(char *dest, char *src);
 dog_t *new_dog(char *name, float age, char *owner);
 
@@ -61,7 +61,7 @@ dog_t *new_dog(char *name, float age, char *owner)
 	if (doggo == NULL)
 		return (NULL);
 
-	dogg0->name = malloc(sizeof(char) * (_strlen(name) + 1));
+	doggo->name = malloc(sizeof(char) * (_strlen(name) + 1));
 	if (doggo == NULL)
 	{
 		free(doggo);

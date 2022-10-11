@@ -1,5 +1,5 @@
-#ifnder DOG_H
-#defind DOG_H
+#ifndef DOG_H
+#define DOG_H
 
 /**
  * struct dog - a new type describing a dog.
