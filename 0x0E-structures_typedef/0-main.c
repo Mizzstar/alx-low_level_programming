@@ -15,4 +15,4 @@ int main(void)
 	my_dog.owner = "Bob";
 	printf("My name is %s, and I am %.lf :) - woof!\n", my_do.name, my_dog.age);
 	return (0);
-}
+
