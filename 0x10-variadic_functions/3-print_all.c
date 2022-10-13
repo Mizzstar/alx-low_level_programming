@@ -68,46 +68,49 @@ void print_string(va_list arg)
 }
 
 /**
- * print_all - prints anything, followed by a new line.
- * @format: a string of characters representing the argument types.
- * @...: a variable number of arguments to be printed.
- *
- * Description: any argument not of type char, int, float,
- * or char * is ignored.
- * if a string argument is Null, (nil) is printed instead.
+ * print_all - entry point
+ * c = char, i = int, f = float, s = char * (if null print (nil))
+ * @format: list of arg types
+ * Return: 0
  */
 void print_all(const char * const format, ...)
 {
-	va_list args;
-	int i = 0, j = 0;
-	char *separator = "";
-	printer_t funcs[] = {
-		{"c", print_char},
-		{"i", print_int},
-		{"f", print_float},
-		{"s", print_string}
-	};
+	va_list valist;
+	int n = 0, i = 0;
+	char *sep = ", ";
+	char *str;
 
-	va_start(args, format);
+	va_start(valist, format);
 
-	while (format && (*(format + i)))
-	{
-		j = 0;
-
-		while (j < 4 && (*(format + i) != *(funcs[j].symbol)))
-			j++;
-
-		if (j < 4)
-		{
-			printf("%s", separator);
-			funcs[j].print(args);
-			separator = ", ";
-		}
-
+	while (format && format[i])
 		i++;
+
+	while (format && format[n])
+	{
+		if (n == (i - 1))
+		{
+			sep = "";
+		}
+		switch (format[n])
+		{
+			case 'c':
+				print("%c%s", va_arg(valist, int), sep);
+				break;
+			case 'i':
+				printf("%d%s", va_arg(valist, int), sep);
+				break;
+			case 'f':
+				printf("%f%s", va_arg(valist, double), sep);
+				break;
+			case 's':
+				str = va_arg(valist, char *);
+				if (str == NULL)
+					str = "(nil)";
+				printf("%s%s", str, sep);
+				break;
+		}
+		n++;
 	}
-
 	printf("\n");
-
-	va_end(args);
+	va_end(valist);
 }
