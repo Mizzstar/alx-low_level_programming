@@ -3,7 +3,7 @@
 #include <stdarg.h>
 
 /**
- * print_numbers - prints numbers,followed by a new line.
+ * print_numbers - prints numbers, followed by a new line.
  * @separator: the string to be printed between numbers.
  * @n: the number of integers passed to the function.
  * @...: a variable number of numbers to be pirnted.
@@ -15,7 +15,7 @@ void print_numbers(const char *separator, const unsigned int n, ...)
 
 	va_start(nums, n);
 
-	for (index = 0; index < n; indexx++)
+	for (index = 0; index < n; index++)
 	{
 		printf("%d", va_arg(nums, int));
 

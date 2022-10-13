@@ -10,7 +10,7 @@ void print_all(const char * const format, ...);
 
 /**
  * print_char - prints a char.
- * @arg:a list of arguments pointing to
+ * @arg: a list of arguments pointing to
  * the character to be printed.
  */
 void print_char(va_list arg)
@@ -69,7 +69,7 @@ void print_string(va_list arg)
 
 /**
  * print_all - prints anything, followed by a new line.
- * @format: a string of characters representing the argument types
+ * @format: a string of characters representing the argument types.
  * @...: a variable number of arguments to be printed.
  *
  * Description: any argument not of type char, int, float,
@@ -100,7 +100,7 @@ void print_all(const char * const format, ...)
 		if (j < 4)
 		{
 			printf("%s", separator);
-			func[j].print(args);
+			funcs[j].print(args);
 			separator = ", ";
 		}
 
