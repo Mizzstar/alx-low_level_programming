@@ -6,7 +6,7 @@
  * @c: the character tp print
  *
  * Return: always 1
- * on error, -1 is returned, and error is set apporpriately.
+ * on error, -1 is returned, and errno is set apporpriately.
  */
 int _putchar(char c)
 {
