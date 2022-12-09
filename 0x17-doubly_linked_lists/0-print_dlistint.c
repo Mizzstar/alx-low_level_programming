@@ -3,23 +3,21 @@
 #include <stdio.h>
 
 /**
- * print_dlistint - prints elements in double linked list
- * @h: dlistint-t const
- * return: size_t
+ * print_dlistint - prints all the elements of a dlistint_t lists.
+ * @h: the head of the dlistint_t list.
+ * return: the number of nodes in the list.
  */
 
-size_ print_dlistint(const dlistint_t *h)
+size_t print_dlistint(const dlistint_t *h)
 {
-
-	size_t count = 0;
+	size_t nodes = 0;
 
 	while (h)
 	{
+		nodes++;
 		printf("%d\n", h->n);
 		h = h->next;
-		count++;
-
 	}
-	return (count);
-
+	
+	return (nodes);
 }
